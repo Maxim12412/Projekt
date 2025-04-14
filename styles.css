@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+header, footer {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.skills, .projects {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skills div, .projects div {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1 1 calc(50% - 20px); /* 50% ширини на мобільних */
+    text-align: center;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Медіа-запити для планшетів та ПК */
+@media (min-width: 768px) {
+    .skills div, .projects div {
+        flex: 1 1 calc(33.33% - 20px); /* 3 колонки на планшетах */
+    }
+    img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills, .projects {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 колонки на ПК */
+        gap: 15px;
+    }
+    .skills div, .projects div {
+        flex: none;
+    }
+}
